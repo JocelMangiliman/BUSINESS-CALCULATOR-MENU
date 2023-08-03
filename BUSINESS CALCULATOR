@@ -1,0 +1,27 @@
+while True:
+    print('BUSINESS CALCULATOR MENU')
+    print('1] Simple Interest')
+    print('2] Compound Interest')
+    print('3] Exit')
+    choice = input('Choose[1/2/3]: ')
+
+    if choice == '1':
+        principal = float(input('Enter Principal Amount: '))
+        interest_rate = float(input('Enter Interest Rate: '))
+        time_in_years = float(input('Enter Time (in Years): '))
+        interest = principal * interest_rate * time_in_years
+        print(f'Interest:  {interest}')
+
+    elif choice == '2':
+        principal = float(input('Enter Principal Amount: '))
+        rate = float(input('Enter Rate: '))
+        time_in_years = float(input('Enter Time (in Years): '))
+        compound_interest = principal * pow((1 + rate), time_in_years)
+        print(f'Compound Interest:  {compound_interest}')
+
+    elif choice == '3':
+        print('Thank you for using my Business Calculator')
+        break
+
+    else:
+        print('Invalid choice, please try again.')
